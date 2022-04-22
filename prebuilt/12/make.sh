@@ -59,3 +59,23 @@ echo "ro.lmk.kill_timeout_ms=100" >> $1/product/build.prop
 echo "ro.lmk.use_minfree_levels=true" >> $1/product/build.prop
 
 #sudo sed -i "s|/dev/uinput               0660   uhid       uhid|/dev/uinput               0660   system     bluetooth|" $1/etc/ueventd.rc
+# Disable bpfloader
+rm -rf $1/etc/init/bpfloader.rc
+echo "bpf.progs_loaded=1" >> $1/product/etc/build.prop
+
+# Don't write binary XML files
+echo "persist.sys.binary_xml=false" >> $1/build.prop
+
+# Bypass SF validateSysprops
+echo "ro.surface_flinger.vsync_event_phase_offset_ns=-1" >> $1/product/etc/build.prop
+echo "ro.surface_flinger.vsync_sf_event_phase_offset_ns=-1" >> $1/product/etc/build.prop
+echo "debug.sf.high_fps_late_app_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.early_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.early_gl_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.early_app_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.early_gl_app_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.high_fps_late_sf_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.high_fps_early_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.high_fps_early_gl_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.high_fps_early_app_phase_offset_ns=" >> $1/product/etc/build.prop
+echo "debug.sf.high_fps_early_gl_app_phase_offset_ns=" >> $1/product/etc/build.prop
