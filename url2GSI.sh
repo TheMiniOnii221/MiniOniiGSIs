@@ -176,3 +176,8 @@ echo "SRCTYPENAME = ${SRCTYPENAME}"
 echo "OTHER = ${@}"
 echo "ZIP_NAME = ${ZIP_NAME}"
 fi
+
+
+echo "Unmounting Stuff for Next Builds"
+UMOUNT "$PROJECT_DIR/working"
+rm -rf "$PROJECT_DIR/working"
