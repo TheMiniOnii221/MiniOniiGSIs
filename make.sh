@@ -143,6 +143,7 @@ case "$sourcever" in
     *"12"*) flag=true ;;
     *"Tiramisu"*) flag=true ;;
     *"TiramisuPrivacySandbox"*) flag=true ;;
+    *"UpsideDownCake"*) flag=true ;;
 esac
 if [ "$flag" == "false" ]; then
     echo "$sourcever is not supported"
