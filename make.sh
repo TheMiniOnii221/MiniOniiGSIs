@@ -85,7 +85,7 @@ rm -rf $tempdir
 mkdir -p "$systemdir"
 
 if [ "$sourcetype" == "Aonly" ]; then
-    echo "Warning: Aonly source detected, using P AOSP ramdisk"
+    echo "Warning: Aonly source detected, using AOSP ramdisk"
     cd "$systemdir"
     tar xf "$prebuiltdir/ABrootDir.tar"
     cd "$LOCALDIR"
