@@ -1,7 +1,4 @@
 
-[submodule "prebuilt/vendor_vndk"]
-	path = prebuilt/vendor_vndk
-	url = https://github.com/MinatiScape/vendor_vndk
 [submodule "tools/ROM_resigner"]
 	path = tools/ROM_resigner
 	url = https://github.com/erfanoabdi/ROM_resigner.git
