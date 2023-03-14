@@ -141,7 +141,7 @@ case "$sourcever" in
     *"8.1"*) flag=true ;;
     *"8"*) flag=true ;;
     *"12"*) flag=true ;;
-    *"Tiramisu"*) flag=true ;;
+    *"13"*) flag=true ;;
     *"TiramisuPrivacySandbox"*) flag=true ;;
     *"UpsideDownCake"*) flag=true ;;
 esac
